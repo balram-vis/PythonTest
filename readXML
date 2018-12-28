@@ -1,0 +1,12 @@
+from xml.etree.ElementTree import XML
+
+txt = """<?xml version="1.0" encoding="UTF-8"?>
+<Response>
+    <Message>In what city do you need to rent a car?</Message>
+</Response>"""
+
+# this will give us the contents of the data tag.
+data = XML(txt).find("Message").text
+
+# ... so here we could do whatever we want
+print data
